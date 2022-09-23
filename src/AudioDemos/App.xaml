@@ -1,0 +1,35 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:AudioDemos.Controls"
+             xmlns:local="clr-namespace:AudioDemos"
+             x:Class="AudioDemos.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing"
+                        Value="6" />
+                <Setter Property="ColumnSpacing"
+                        Value="6" />
+            </Style>
+
+            <Style TargetType="StackLayout">
+                <Setter Property="Spacing"
+                        Value="6" />
+            </Style>
+
+            <controls:UriAudioSource x:Key="AliceInWonderland"
+                                     Uri="https://archive.org/download/alice_in_wonderland_librivox/wonderland_ch_01.mp3" />
+            <controls:UriAudioSource x:Key="TomSawyer"
+                                     Uri="https://archive.org/download/tom_sawyer_librivox/TSawyer_01-02_twain.mp3" />
+            <controls:UriAudioSource x:Key="SherlockHolmes"
+                                     Uri="https://archive.org/download/adventures_holmes/adventureholmes_01_doyle.mp3" />
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
