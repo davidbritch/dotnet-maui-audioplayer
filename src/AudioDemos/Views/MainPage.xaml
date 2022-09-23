@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AudioDemos.Views"
+             x:Class="AudioDemos.Views.MainPage"
+             Title="Audio player demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Play web audio"
+                          Detail="Play audio by specifying a URL"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayWebAudioPage}" />
+                <TextCell Text="Select web audio"
+                          Detail="Select audio from a CollectionView"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SelectWebAudioPage}" />
+                <TextCell Text="Bind to Audio control"
+                          Detail="Select audio with a CollectionView binding"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BindToAudioPlayerPage}" />
+                <TextCell Text="Play audio resource"
+                          Detail="Play audio saved as a resource"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayAudioResourcePage}" />
+                <TextCell Text="Play library audio"
+                          Detail="Play audio from the library"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayLibraryAudioPage}" />
+                <TextCell Text="Custom transport controls"
+                          Detail="Play audio with custom Play and Pause buttons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomTransportPage}" />
+                <TextCell Text="Custom position bar"
+                          Detail="Play audio  with a custom position bar"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomPositionBarPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
