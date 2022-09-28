@@ -77,7 +77,7 @@ namespace AudioDemos.Platforms.Android
                 if (!string.IsNullOrWhiteSpace(filename))
                 {
                     _mediaPlayer.SetDataSource(filename);
-                    _mediaPlayer.Start();
+                    _mediaPlayer.Prepare();
                     hasSetSource = true;
                 }
             }
