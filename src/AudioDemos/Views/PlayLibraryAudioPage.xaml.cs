@@ -21,8 +21,9 @@ public partial class PlayLibraryAudioPage : ContentPage
                 new Dictionary<DevicePlatform, IEnumerable<string>>
                 {
                     { DevicePlatform.WinUI, new [] { "*.mp3", "*.m4a" } },
-                    { DevicePlatform.Android, new [] { "*.mp3", ".3gp", ".mp4", ".m4a", ".aac", ".ts", ".amr", ".flac", ".mid", ".xmf", ".mxmf", ".rtttl", ".rtx", ".ota", ".imy", ".mkv", ".ogg", ".wav" } },
-                    { DevicePlatform.iOS, new[] { "*.mp3", "*.aac", "*.aifc", "*.au", "*.aiff", "*.mp2", "*.3gp", "*.ac3" } }
+                    { DevicePlatform.Android, new [] { "audio/*" } },
+                    { DevicePlatform.iOS, new[] { "public.audio" } },
+                    { DevicePlatform.MacCatalyst, new[] { "public.audio" } }
                 })
         });
 

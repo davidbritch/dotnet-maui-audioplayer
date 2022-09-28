@@ -70,7 +70,7 @@ namespace AudioDemos.Platforms.MaciOS
             {
                 string uri = (_audio.Source as FileAudioSource).File;
                 if (!string.IsNullOrWhiteSpace(uri))
-                    asset = AVAsset.FromUrl(new NSUrl(uri));
+                    asset = AVAsset.FromUrl(NSUrl.CreateFileUrl(new[] { uri }));
             }
             else if (_audio.Source is ResourceAudioSource)
             {
